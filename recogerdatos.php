@@ -1,7 +1,17 @@
 <?php
 include 'AccesoBD.php';
-$usuario=$_POST['usuario'];
-$datos=$_POST['datos'];
-//.....&.....&.....&
-$lista_puntos= split('#', $datos);
-grabarDatos($usuario, $lista_puntos);
+$accion=$_POST['accion'];
+if ($accion=='grabar')
+{
+            $usuario=$_POST['usuario'];
+            $datos=$_POST['datos'];
+            //.....&.....&.....&
+            $lista_puntos= split('#', $datos);
+            grabarDatos($usuario, $lista_puntos);
+}
+else //Suponemos que es qver ruta
+{
+     $usuario=$_GET['usuario'];
+     $json=devolverPuntos($usuario);
+     echo($json);
+}
