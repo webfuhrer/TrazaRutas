@@ -11,7 +11,7 @@ if ($accion=='grabar')
 }
 else //Suponemos que es qver ruta
 {
-     $usuario=$_GET['usuario'];
+     $usuario=$_POST['usuario'];
      $json=devolverPuntos($usuario);
      echo($json);
 }

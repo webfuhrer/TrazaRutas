@@ -50,8 +50,8 @@ function enviarDatos(cadena)
 }
 xmlhttp.open("POST", "recogerdatos.php", true);
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xmlhttp.send("usuario="+usuario+"&datos="+cadena);
-alert("Envio de "+"usuario="+usuario+"datos="+cadena)
+xmlhttp.send("usuario="+usuario+"&datos="+cadena+"&accion=grabar");
+
 }
 function formarCadena(lista)
 {
